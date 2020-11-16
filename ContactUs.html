@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Bitrupt Trainee</title>
+</head>
+<body>
+  <div class="container">
+  <header class="header">
+    <a href="./Home.html"><img class="header__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/></a>
+    <h1 class="header__text">My First Website By Bitrupt</h1>
+  </header>
+    <section class="menubar">
+      <a class="btn btn__home" href="./Home.html">Home</a>
+      <a class="btn btn__profile" href="#">Profile</a>
+      <a class="btn btn__aboutUs" href="./Task4.html">About us</a>
+      <a class="btn btn__contactUs" href="./ContactUs.html">Contact us</a>
+      <a class="btn btn__logout" href="#">Logout</a>
+    </section>
+    <section class="page">
+      <div class="page__text">
+        <div class="form">
+        <div class="form__fields">
+          <label class="form__fields-label" for="name">Full name:</label>
+          <input class="form__fields-input" id="name" placeholder="Your name..">
+        </div>
+
+        <div class="form__fields">
+          <label class="form__fields-label" for="email">Email:</label>
+          <input class="form__fields-input" id="email" placeholder="Your email">
+        </div>
+
+        <div class="form__fields">
+          <label class="form__fields-label" for="countries">Country:</label>
+          <select class="form__fields-input" name="countries" id="countries">
+            <option value="Pakistan">Pakistan</option>
+            <option value="Singapore">Singapore</option>
+            <option value="India">India</option>
+            <option value="China">China</option>
+          </select>
+        </div>
+
+        <div class="form__fields">
+          <label class="form__fields-label" for="subject">Subject:</label>
+          <input class="form__fields-input" id="subject" placeholder="Subject">
+        </div>
+
+        <div class="form__fields-msg">
+          <label class="form__fields-msg-label">Your Message:</label>
+          <textarea class="form__fields-msg-input" id="yourMessage" name="yourMessage" rows="10" cols="37"  placeholder="Write something here...">
+          </textarea>
+        </div>  
+
+        <button class="form-btn" value="submit">Submit</button>
+        
+      </div>
+      </div>
+      <div class="page__picture">
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d57898.76550971402!2d67.03528682286861!3d24.909138611785675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3eb33f5a70a8370f%3A0x71747af0780cf74f!2sBitrupt%2C%20Goth%20Baluch%2C%20Azam%20Khan%20Road%2C%20Block%2013D-3%20Block%2013%20D%203%20Gulshan-e-Iqbal%2C%20Karachi!3m2!1d24.9091427!2d67.07030639999999!4m5!1s0x3eb33f5a70a8370f%3A0x71747af0780cf74f!2sbitrupt!3m2!1d24.9091427!2d67.07030639999999!5e0!3m2!1sen!2s!4v1605529817383!5m2!1sen!2s"
+              width="400"
+              height="520"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0" 
+          ></iframe>
+      </div>
+
+      
+    </section>
+  </div>
+</body>
+</html>
