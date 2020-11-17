@@ -8,10 +8,10 @@
 </head>
 <body>
   <div class="container">
-  <header class="header">
-    <a href="./Home.html"><img class="header__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/></a>
-    <h1 class="header__text">My First Website By Bitrupt</h1>
-  </header>
+    <header class="header">
+      <a href="./Home.html"><img class="header__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/></a>
+      <h1 class="header__text">My First Website By Bitrupt</h1>
+    </header>
     <section class="menubar">
       <a class="btn btn__home" href="./Home.html">Home</a>
       <a class="btn btn__profile" href="#">Profile</a>
@@ -21,41 +21,41 @@
     </section>
     <section class="page">
       <div class="page__text">
-        <div class="form">
-        <div class="form__fields">
-          <label class="form__fields-label" for="name">Full name:</label>
-          <input class="form__fields-input" id="name" placeholder="Your name..">
-        </div>
+        <form class="form">
+          <div class="form__fields">
+            <label class="form__fields-label" for="name">Full name:</label>
+            <input class="form__fields-input" id="name" placeholder="Your name..">
+          </div>
 
-        <div class="form__fields">
-          <label class="form__fields-label" for="email">Email:</label>
-          <input class="form__fields-input" id="email" placeholder="Your email">
-        </div>
+          <div class="form__fields">
+            <label class="form__fields-label" for="email">Email:</label>
+            <input class="form__fields-input" id="email" placeholder="Your email">
+          </div>
 
-        <div class="form__fields">
-          <label class="form__fields-label" for="countries">Country:</label>
-          <select class="form__fields-input" name="countries" id="countries">
-            <option value="Pakistan">Pakistan</option>
-            <option value="Singapore">Singapore</option>
-            <option value="India">India</option>
-            <option value="China">China</option>
-          </select>
-        </div>
+          <div class="form__fields">
+            <label class="form__fields-label" for="countries">Country:</label>
+            <select class="form__fields-input" name="countries" id="country">
+              <option value="Pakistan">Pakistan</option>
+              <option value="Singapore">Singapore</option>
+              <option value="India">India</option>
+              <option value="China">China</option>
+            </select>
+          </div>
 
-        <div class="form__fields">
-          <label class="form__fields-label" for="subject">Subject:</label>
-          <input class="form__fields-input" id="subject" placeholder="Subject">
-        </div>
+          <div class="form__fields">
+            <label class="form__fields-label" id="subject" for="subject">Subject:</label>
+            <input class="form__fields-input" id="subject" placeholder="Subject">
+          </div>
 
-        <div class="form__fields-msg">
-          <label class="form__fields-msg-label">Your Message:</label>
-          <textarea class="form__fields-msg-input" id="yourMessage" name="yourMessage" rows="10" cols="37"  placeholder="Write something here...">
-          </textarea>
-        </div>  
+          <div class="form__fields-msg">
+            <label class="form__fields-msg-label" id="message">Your Message:</label>
+            <textarea class="form__fields-msg-input" placeholder="Write something here..." id="message" rows="10" cols="37"  >
+            </textarea>
+          </div>  
 
-        <button class="form-btn" value="submit">Submit</button>
-        
-      </div>
+          <button class="form-btn" value="submit" onclick="validate()">Submit</button>
+          
+        </form>
       </div>
       <div class="page__picture">
         <iframe class="map"
@@ -68,10 +68,31 @@
               aria-hidden="false"
               tabindex="0" 
           ></iframe>
-      </div>
-
-      
+      </div>      
     </section>
   </div>
+
+  <script>  
+    function validate() {
+      var fullName = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var country = document.getElementById("country").value;
+      var subject = document.getElementById("subject").value;
+      var message = document.getElementById("message").value;
+      var nameArr = fullName.split("");
+      var emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+      if(fullName == "" || email == "" || country == "" || subject == "" || message == "") {
+        alert("All fields are required.");
+      }
+      if(nameArr[0] != nameArr[0].toUpperCase()) {
+        alert("The first letter of your name should be capital alphabet");
+      }
+      if(!email.match(emailFormat)) {
+        alert("Enter a valid email address");
+      } 
+    }
+  </script>
+
 </body>
 </html>
