@@ -180,3 +180,50 @@ button:focus {
 .map {
 	filter: grayscale(100%);
 }
+
+.page__profilebg {
+	background-color: #d1cfe4;
+	height: 80vh;
+	grid-row: 2/-1;
+	grid-column: 2 / -1;
+	display: grid;
+	/* grid-template-columns: repeat(2, 1fr); */
+	grid-template-rows: repeat(7, 1fr);
+	padding: 10px;
+}
+
+.profile {
+	background-color: #ede5e3;
+	width: inherit;
+	height: 78vh;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+.profile__table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	height: 92%;
+	width: 95%;
+	border: 0.5px solid;
+}
+
+td,
+th {
+	padding-right: 10px;
+	padding-left: 8px;
+	border: 1px solid;
+	text-align: center;
+}
+
+thead th {
+	text-transform: uppercase;
+	padding: 10px;
+	font-weight: bolder;
+}
+
+tr:nth-child(odd) {
+	background-color: #d1cfe4;
+}
