@@ -187,7 +187,6 @@ button:focus {
 	grid-row: 2/-1;
 	grid-column: 2 / -1;
 	display: grid;
-	/* grid-template-columns: repeat(2, 1fr); */
 	grid-template-rows: repeat(7, 1fr);
 	padding: 10px;
 }
@@ -226,4 +225,54 @@ thead th {
 
 tr:nth-child(odd) {
 	background-color: #d1cfe4;
+}
+
+.loginPage {
+	background-color: #d1cfe4;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.loginArea {
+	background-color: #dbd7e5;
+	display: flex;
+	width: 40%;
+	height: 50%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.login__logo {
+	width: 60px;
+	height: 60px;
+	z-index: 100;
+}
+
+.login-btn {
+	background-color: #4e4e4e;
+	border: 2px outset white;
+	align-self: center;
+	color: white;
+	padding: 6px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.login-input {
+	border: none;
+	padding: 10px;
+	margin-bottom: 15px;
+	width: 97%;
+	text-align: center;
+	transform: scale(0.8);
+	font-size: 18px;
 }
