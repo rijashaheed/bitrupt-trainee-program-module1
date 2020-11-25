@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
   <title>Bitrupt Trainee</title>
 </head>
@@ -14,14 +13,20 @@
       <a href="./Home.html"><img class="header__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/></a>
       <h1 class="header__text">My First Website By Bitrupt</h1>
     </header>
-    <section class="menubar">
-      <button class="btn btn__home" onClick="document.location='./Home.html'"><i class="fa fa-home"></i>Home</button>
-      <a class="btn btn__profile" href="#">Profile</a>
-      <a class="btn btn__aboutUs" href="./Task4.html">About us</a>
+    <div id="menubar" style="display: none;" onclick="toggleMenubar()" >
+      <a class="btn btn__home" href="./Home.html">Home</a>
+      <a class="btn btn__profile" href="./Profile.html">Profile</a>
+      <a class="btn btn__aboutUs" href="./AboutUs.html">About us</a>
       <a class="btn btn__contactUs" href="./ContactUs.html">Contact us</a>
-      <!-- <button class="btn btn__home" onClick="document.location='./ContactUs.html'"><i class="fa fa-car" style="font-size:48px;"></i>Contact</button> -->
       <a class="btn btn__logout" href="./index.html">Logout</a>
-    </section>
+    </div>
+    <div id="menubarIcons" onclick="toggleMenubarIcons()">
+      <button class="btn-icons" onClick="document.location='./Home.html'"><i class="fa fa-home"></i></button>
+      <button class="btn-icons" onClick="document.location='./Profile.html'"><i class="fas fa-user"></i></button>
+      <button class="btn-icons" onClick="document.location='./AboutUs.html'"><i class="fas fa-users"></i></button>
+      <button class="btn-icons " onClick="document.location='./ContactUs.html'"><i class="fas fa-envelope"></i></button>
+      <button class="btn-icons btnicon__logout" onClick="document.location='./index.html'"><i class="fas fa-sign-out-alt"></i></button>
+    </div>
     <section class="page__profilebg">
       <div class="profile">
         <table class="profile__table">
@@ -94,8 +99,20 @@
   </div>
 
   <script>
-    var menubar = document.getElementsByClassName("menubar");
-    
-  </script>
+    var menubar = document.getElementById("menubar");
+    var menubarIcons = document.getElementById("menubarIcons");
+  
+      function toggleMenubar () {  
+        menubar.style.display = "none";
+        menubarIcons.style.display = "flex";
+      }
+  
+      function toggleMenubarIcons() {
+        menubarIcons.style.display= "none";
+        menubar.style.display = "flex";
+      }
+     
+  
+    </script>
 </body>
 </html>
