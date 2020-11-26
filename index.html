@@ -14,23 +14,23 @@
     <input id="login-password" class="login__input" type="password" placeholder="Password"/>
     <button class="login__btn" value="submit" onclick="validate()">Login</button>
   </div>
-</body>
+  
   <script>
     function validate() {
-    var loginEmail = document.getElementById("login-email").value;
-    var loginPassword = document.getElementById("login-password").value;
-    var passArr = loginPassword.split("");
-    var emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    var numbers = /\d/;
-    var capLetter = /[A-Z]/;
-    var symbols = /[-\/:-@\[-\`{-~!]/;
+      var loginEmail = document.getElementById("login-email").value;
+      var loginPassword = document.getElementById("login-password").value;
+      var passArr = loginPassword.split("");
+      var emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      var numbers = /\d/;
+      var capLetter = /[A-Z]/;
+      var symbols = /[-\/:-@\[-\`{-~!]/;
    
-    if(!loginEmail.match(emailFormat) || passArr.length < 8 || !(numbers.test(loginPassword)) || !(capLetter.test(loginPassword)) || !(symbols.test(loginPassword))) {
-       alert("Please enter correct Email or Password");
-    } 
-    else {
-      document.location='./Home.html';
-    }  
+      if(!loginEmail.match(emailFormat) || passArr.length < 8 || !(numbers.test(loginPassword)) || !(capLetter.test(loginPassword)) || !(symbols.test(loginPassword))) {
+        alert("Please enter correct Email or Password");
+      } 
+      else {
+        document.location='./Home.html';
+      }  
     }
   </script>
 </body>

@@ -28,35 +28,34 @@
       <button class="btn-icons btnicon__logout" onClick="document.location='./index.html'"><i class="fas fa-sign-out-alt"></i></button>
     </div>
     <section class="page">
-      <div class="page__text">
+      <div id="page__text">
         <h3 class="page__text-quote">"A Small Team Of A+ Players Can Circle Around A Giant Team Of B And C Players"</h3>
         <h6 class="page__text-author">-Steve Jobs</h6>
         <p class="page__text-description">Bitrupt is where development experts thrive, helping the most admired companies and young startups build applications that matter</p>
       </div>
       <div class="page__picture">
-        <img class="page__picture--img" id="pic" src="./furniture.jpg" alt="furniture" />
+        <img id="page__picture--img" src="./furniture.jpg" alt="furniture" />
       </div>
     </section>
   </div>
 
   <script>
-  var menubar = document.getElementById("menubar");
-  var menubarIcons = document.getElementById("menubarIcons");
-  var pic = document.getElementsByTagName("img");
+    var menubar = document.getElementById("menubar");
+    var menubarIcons = document.getElementById("menubarIcons");
+    var text = document.getElementById("page__text");
+    var pic = document.getElementById("page__picture--img");
 
     function toggleMenubar () {  
       menubar.style.display = "none";
       menubarIcons.style.display = "flex";
-      pic.style.width = "490px";
+      pic.style.width="490px";
     }
 
     function toggleMenubarIcons() {
       menubarIcons.style.display= "none";
       menubar.style.display = "flex";
-      pic.style.width = "400px !important";
+      pic.style.width="400px";
     }
-   
-
   </script>
 </body>
 </html>
